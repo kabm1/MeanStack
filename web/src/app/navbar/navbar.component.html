@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="/invite">Link</a>
+      </li> -->
+      <li class="nav-item dropdown" *ngIf="isLoggedIn() && isAdmin()">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarStaffDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/signup">Add</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/edituser">Edit</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" *ngIf="isLoggedIn() && isAdmin()">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarQuestionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Questions
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/question">Add</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/editquestion">Edit</a>
+        </div>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && isAdmin()">
+          <a class="nav-link" routerLink="/evaluate">Evaluation</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && !isAdmin()">
+          <a class="nav-link" routerLink="/invite">Invitation</a>
+      </li>
+      
+    </ul>
+    <div class="form-inline my-2 my-lg-0" *ngIf="!isLoggedIn()">
+        <a class="btn btn-outline-success my-2 my-sm-0" routerLink="/signin">Login</a>
+    </div>
+    <div class="logged_in" *ngIf="isLoggedIn()">
+        <a class="btn btn-outline-success my-2 my-sm-0" (click)="onLogout()" href="javascript:void(0)">Logout</a>
+    </div>
+  </div>
+</nav>

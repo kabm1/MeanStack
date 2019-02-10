@@ -1,0 +1,23 @@
+<div class="col-md-12 text-center mt-5">
+    <h1 class="brand-heading">Screen Applications</h1>
+    <span *ngIf="!isLoggedIn()">
+      <p class="intro-text">Please login first to use features.</p>
+      <a routerLink="/signin" class="btn btn-primary btn-raised btn-lg page-scroll">
+        Login
+      </a>
+    </span>
+</div>
+<div class="col-md-12 text-center mt-5">
+    <div class="col-md-6 text-center float-left mt-2">
+      <h1 class="brand-heading">Crate Question Bank</h1>
+      <p> Add, activate and deactivate questions </p>
+      <h1 class="brand-heading">Create Users</h1>
+      <p> Create, activate and deactivate accounts </p>
+    </div>
+    <div class="col-md-6 text-center float-left mt-2">
+      <h1 class="brand-heading">Email Prosepective Students</h1>
+      <p> Send email invitation to prosepective studens</p>
+      <h1 class="brand-heading">Evaluate Exam</h1>
+      <p> Evaluate and publish exams results</p>
+    </div>
+</div>

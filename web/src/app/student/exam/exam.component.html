@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
+
+
+</head>
+<body>
+  <h1>{{done}}</h1>
+  <script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
+  <div id="timer">
+  <table class="cdc">
+      <tr class="info">
+        <td colspan="4">Time started</td>
+      </tr>
+      <tr class="info">
+        <td id="hours">0</td>
+        <td id="minuets">0</td>
+        <td id="seconds">0</td>
+      </tr>
+      <tr >
+        <td > Hr</td>
+        <td > Min</td>
+        <td > Secs</td>
+       </tr>
+    </table>
+  </div>
+  
+  <!--   
+    <button type="submit" class="btn btn-success btn-lg float-left" id="btnLogin" [disabled]="!loginForm.valid">Login</button> -->
+  
+      <button id="start" class="btn btn-success btn-lg float-left" type="button" (click)="myStart()">Start</button>  <br><br>
+  
+      <p id="p1">{{Question1}}e</p>
+      <div id="myEditor1" ng-model="edit1"> <!-- programing questions1 started --> </div>
+      
+        <p id="p2">{{Question2}}</p>
+      <div id="myEditor2"> <!-- programing questions2 started --></div>
+        <p id="p3">{{Question3}}</p>
+      <div id="myEditor3"> <!-- programing questions3 started --> </div>
+  
+      <button class="btn btn-success btn-lg float-left"  (click)="mySubmit()">Submit</button> <br><br>
+</body>
+</html>

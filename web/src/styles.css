@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ag-grid-community/dist/styles/ag-grid.css';
+@import 'ag-grid-community/dist/styles/ag-theme-balham.css';
+
+  #invitation {
+    margin-top: 20px;
+    width: 300px;
+    padding: 30px 25px;
+    background: white;
+    
+
+  }
+  
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
